@@ -1,4 +1,5 @@
 import {HoroscopeStateTypes} from "types/StateTypes";
+import {SetHoroscopeType} from "bll/actions/horoscope-action";
 
 
 const horoscopeInitialState = {
@@ -6,9 +7,12 @@ const horoscopeInitialState = {
     period: '',
     horoscope:[]
 }
-
-export const HoroscopeReducer =(state:HoroscopeStateTypes=horoscopeInitialState,action:any):HoroscopeStateTypes=>{
+export type HoroscopeReducerActionsType = SetHoroscopeType
+export const HoroscopeReducer =(state:HoroscopeStateTypes=horoscopeInitialState,action:HoroscopeReducerActionsType):HoroscopeStateTypes=>{
     switch (action.type){
+        case "SET-HOROSCOPE":{
+            return {...state,...action.data}
+        }
         default:return state
     }
 

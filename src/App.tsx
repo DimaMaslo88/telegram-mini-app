@@ -1,4 +1,5 @@
 import React from 'react';
+import {Horoscope} from "ui/components/Horoscope";
 
 
 
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <div style={{display:'flex',flexDirection:'column'}}>
-  Hello Mother fucker
+  <Horoscope/>
       <button>Add horoscope</button>
     </div>
   );
