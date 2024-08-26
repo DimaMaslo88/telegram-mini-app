@@ -3,8 +3,8 @@ import {SetHoroscopeType} from "bll/actions/horoscope-action";
 
 
 const horoscopeInitialState = {
-    language:  '' ,
-    period: '',
+    language:  'translated' ,
+    period: 'today',
     horoscope:[]
 }
 export type HoroscopeReducerActionsType = SetHoroscopeType

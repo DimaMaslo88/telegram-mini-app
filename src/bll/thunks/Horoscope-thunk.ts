@@ -6,6 +6,7 @@ export const SetHoroscopeThunk =(params:{language:string,period:string}): AppThu
 
     try{
         const res = await HoroscopeApi.getAllSigns(params)
+        console.log(res,"RES")
         dispatch(setHoroscope(res.data))
     }catch (err){
         console.log(err)

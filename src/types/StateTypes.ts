@@ -4,6 +4,6 @@ export type HoroscopeStateTypes = {
     horoscope:HoroscopeType[]
 }
 
-type HoroscopeType ={
+export type HoroscopeType ={
     title:string
 }
